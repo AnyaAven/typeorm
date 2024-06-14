@@ -1,0 +1,30 @@
+{
+  "name": "rithmschool-start-ts-express",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rithmschool/start/",
+  "main": "server.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts",
+    "dev": "tsx watch server.ts",
+    "typeorm": "./node_modules/.bin/typeorm",
+    "typeorm:sync": "./node_modules/.bin/tsx ./node_modules/typeorm/cli.js schema:sync -d db/data-source.ts",
+    "test": "vitest",
+    "test:cov": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.11",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@types/pg": "^8.11.6",
+    "express": "^5.0.0-beta.1",
+    "pg": "^8.12.0",
+    "reflect-metadata": "^0.2.2",
+    "tsx": "^4.15.4",
+    "typeorm": "^0.3.20"
+  }
+}

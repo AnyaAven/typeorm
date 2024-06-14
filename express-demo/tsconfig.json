@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "strict": true,
+        "skipLibCheck": true,
+        "moduleResolution": "Node",
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true, //<-- ENABLES DECORATORS
+        "experimentalDecorators": true,  //<--
+        "strictPropertyInitialization": false //<-- allows for no constructor
+    },
+}
