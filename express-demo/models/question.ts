@@ -18,8 +18,8 @@ export class Question {
   @Column("text")
   text: string
 
-  @Column({type: "varchar", nullable: true, name: "author"})
-  author: string
+  @Column({type: "varchar", nullable: true, name: "author_for"})
+  authorFor: string
 
   @ManyToMany(() => User)
   @JoinTable()

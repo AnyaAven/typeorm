@@ -1,4 +1,6 @@
+# ENUMS
 
+``` ts
 import {
   Entity,
   Column,

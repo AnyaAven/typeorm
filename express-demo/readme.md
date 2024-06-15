@@ -6,8 +6,10 @@ Run `npm install` and then `npm run ...`:
 | Command     | Description          |
 |-------------|----------------------|
 | start       | Start                |
-| start:debug | Start w/debugger     |
+| start:dev   | Start w/watch mode   |
+| typeorm     | Show shell commands  |
+| typeorm:sync| Update tables/models |
 | test        | Run tests            |
 | test:cove   | Run tests w/coverage |
-| test:debug  | Run tests w/debugger |
+
 
