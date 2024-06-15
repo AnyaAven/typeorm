@@ -17,7 +17,7 @@ app.get("/users", async function (req: Request, res: Response) {
 
 app.get("/users/:id", async function (req: Request, res: Response) {
   const results = await myDataSource.getRepository(User).findOneBy({
-      id: req.params.id,
+      id: +req.params.id,
   })
   return res.send(results)
 })
@@ -31,8 +31,9 @@ app.post("/users", async function (req: Request, res: Response) {
 
 app.put("/users/:id", async function (req: Request, res: Response) {
   const user = await myDataSource.getRepository(User).findOneBy({
-      id: req.params.id,
+      id: +req.params.id,
   })
+  if (!user) throw Error
   myDataSource.getRepository(User).merge(user, req.body)
 
   const results = await myDataSource.getRepository(User).save(user)
